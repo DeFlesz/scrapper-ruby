@@ -79,12 +79,12 @@ rescue => HTTPError
   puts "błąd sieci, kończe..."
 end
 
-# CSV.open("/output/cars.csv", "w") do |csv|
-#   csv << ["name", "price", "production_year", "kilometeres_driven", "fuel_capacity", "fuel_type", "thumbnail"]
-#   cars.each do |car|
-#     csv << car.to_a
-#   end
-# end
+CSV.open("./output/cars.csv", "w") do |csv|
+  csv << ["name", "price", "production_year", "kilometeres_driven", "fuel_capacity", "fuel_type", "thumbnail"]
+  cars.each do |car|
+    csv << car.to_a
+  end
+end
 
 css = "
 .car {
@@ -161,7 +161,7 @@ fhtml = "
 "
 # puts fhtml
 kit = PDFKit.new(fhtml)
-kit.to_file("/output/cars.pdf")
+kit.to_file("./output/cars.pdf")
 
 
 # Prawn::Document.generate("cars.pdf") do

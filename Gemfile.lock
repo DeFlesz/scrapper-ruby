@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nokogiri (1.14.3-x86_64-linux)
+      racc (~> 1.4)
+    pdfkit (0.8.7.2)
+    racc (1.6.2)
+    wkhtmltopdf-binary (0.12.6.6)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  nokogiri
+  pdfkit
+  wkhtmltopdf-binary
+
+BUNDLED WITH
+   2.2.3
